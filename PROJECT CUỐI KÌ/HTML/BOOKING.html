@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOKING</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/PROJECT CUỐI KÌ/CSS/BOOKING.css">
+  <style>
+    .tab-active {
+      background-color: white;
+      color: black;
+    }
+  </style> 
+</head>
+<section class="booking-intro">
+  <div class="intro-container">
+    <div class="intro-left">
+      <h1 class="intro-title">BOOKING</h1>
+      <p class="intro-description">
+          Khám phá thế giới nghệ thuật xăm mình – Đặt lịch với <br>
+          nghệ sĩ tattoo chuyên nghiệp chỉ với vài cú nhấp chuột.<br>
+          Tùy chọn mẫu, chọn lịch, và bắt đầu hành trình khắc họa <br>
+          cá tính riêng của bạn ngay hôm nay.
+      </p>
+  </div>
+    <div class="intro-right">
+      <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/butxam.png" alt="Tattoo Machine">
+    </div>
+  </div>
+</section>
+
+<section id="booking" style="background-color: black; color: white; font-family: sans-serif; padding: 40px 0;">
+  <div class="container" style="max-width: 1024px; margin: 0 auto; padding: 0 1rem;">
+
+    <!-- Tabs -->
+    <div class="tab-buttons" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+      <button id="tab-artist" onclick="showTab('artist')" class="tab-active">ARTIST</button>
+      <button id="tab-style" onclick="showTab('style')" >STYLE</button>
+      <button id="tab-payment" onclick="showTab('payment')" >THANH TOÁN</button>
+    </div>
+
+    <!-- Step 1: Select Artist -->
+    <div id="step-artist">
+      <h2 class="text-3xl font-bold mb-4">Chọn Nghệ Sĩ</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <script>
+          const artists = [
+            { name: 'TÍM TÍM', price: 1500000 },
+            { name: 'KAT P.INK', price: 1800000 },
+            { name: 'TÚ ĐEN', price: 2000000 },
+            { name: 'PHẠM MAI', price: 1700000 },
+            { name: 'QUANG PHẠM', price: 2200000 },
+            { name: 'BLACK CHIC', price: 1900000 },
+            { name: 'WIN', price: 1600000 },
+            { name: 'TATA', price: 2100000 },
+          ];
+        </script>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('TÍM TÍM', 1500000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist1_lon.png" alt="TÍM TÍM" class="rounded mb-2">
+          <p class="font-semibold">TÍM TÍM</p>
+          <p class="text-sm">Giá từ 1.500.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('KAT P.INK', 1800000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist2_lon.png" alt="KAT P.INK" class="rounded mb-2">
+          <p class="font-semibold">KAT P.INK</p>
+          <p class="text-sm">Giá từ 1.800.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('TÚ ĐEN', 2000000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist3_lon.png" alt="Artist C" class="rounded mb-2">
+          <p class="font-semibold">TÚ ĐEN</p>
+          <p class="text-sm">Giá từ 2.000.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('PHẠM MAI', 1700000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist4_lon.png" alt="PHẠM MAI" class="rounded mb-2">
+          <p class="font-semibold">PHẠM MAI</p>
+          <p class="text-sm">Giá từ 1.700.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('QUANG PHẠM', 2200000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist5_lon.png" alt="QUANG PHẠM" class="rounded mb-2">
+          <p class="font-semibold">QUANG PHẠM</p>
+          <p class="text-sm">Giá từ 2.200.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('BLACK CHIC', 1900000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist6_lon.png" alt="BLACK CHIC" class="rounded mb-2">
+          <p class="font-semibold">BLACK CHIC</p>
+          <p class="text-sm">Giá từ 1.900.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('WIN', 1600000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist7_lon.png" alt="WIN" class="rounded mb-2">
+          <p class="font-semibold">WIN</p>
+          <p class="text-sm">Giá từ 1.600.000đ</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="selectArtist('TATA', 2100000)">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tt_artist8_lon.png" alt="TATA" class="rounded mb-2">
+          <p class="font-semibold">TATA</p>
+          <p class="text-sm">Giá từ 2.100.000đ</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Select Style -->
+    <div id="step-style" class="hidden">
+      <h2 class="text-3xl font-bold mb-4">Chọn Style</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Negative Space')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style1.png" alt="Negative Space" class="rounded mb-2">
+          <p class="font-semibold">Negative Space</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Old School')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style2.png" alt="Old School" class="rounded mb-2">
+          <p class="font-semibold">Old School</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Pop Art')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style3.png" alt="Pop Art" class="rounded mb-2">
+          <p class="font-semibold">Pop Art</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Blackwork')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style4.png" alt="Blackwork" class="rounded mb-2">
+          <p class="font-semibold">Blackwork</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Tribal')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style5.png" alt="Tribal" class="rounded mb-2">
+          <p class="font-semibold">Tribal</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Mayan')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style6.png" alt="Mayan" class="rounded mb-2">
+          <p class="font-semibold">Mayan</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Realism')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style7.png" alt="Realism" class="rounded mb-2">
+          <p class="font-semibold">Realism</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Japanese')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style8.png" alt="Japanese" class="rounded mb-2">
+          <p class="font-semibold">Japanese</p>
+        </div>
+        <div class="bg-gray-800 p-3 rounded-lg cursor-pointer hover:bg-gray-700" onclick="toggleStyle('Neo-traditional')">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/style9.png" alt="Neo-traditional" class="rounded mb-2">
+          <p class="font-semibold">Neo-traditional</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Payment & Schedule -->
+    <div id="step-payment" class="hidden">
+      <h2 class="text-3xl font-bold mb-4">Thanh Toán & Đặt Lịch</h2>
+
+      <div class="bg-gray-800 p-4 rounded mb-4">
+        <p><strong>Nghệ sĩ:</strong> <span id="selected-artist"></span></p>
+        <p><strong>Giá:</strong> <span id="selected-price"></span></p>
+        <p><strong>Style:</strong> <span id="selected-styles"></span></p>
+      </div>
+
+      <input type="date" id="date" class="text-black p-2 rounded mb-4 w-full">
+      <input type="time" id="time" class="text-black p-2 rounded mb-4 w-full">
+      <input type="text" id="name" placeholder="Họ tên" class="text-black p-2 rounded mb-4 w-full">
+      <input type="text" id="phone" placeholder="Số điện thoại" class="text-black p-2 rounded mb-4 w-full">
+      <input type="email" id="email" placeholder="Email" class="text-black p-2 rounded mb-4 w-full">
+
+      <select id="payment-method" class="text-black p-2 rounded mb-4 w-full">
+        <option>Chuyển khoản</option>
+        <option>Momo</option>
+        <option>Tiền mặt</option>
+      </select>
+
+      <button onclick="submitBooking()" class="px-4 py-2 bg-white text-black rounded hover:bg-gray-200">Xác nhận đặt lịch</button>
+    </div>
+  </div>
+</section>
+
+<section class="tattoo-suggestions">
+  <div class="suggestion-title">
+    <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/asset1.png" alt="decor-left" class="decor decor-left">
+    <h2>ĐỀ XUẤT CHO BẠN</h2>
+    <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/asset2.png" alt="decor-right" class="decor decor-right">
+  </div>
+  
+  <div class="tattoo-grid">
+    <div class="tattoo-item">
+      <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/TYL.png" alt="TYL tattoo">
+      <div class="label">TYL</div>
+    </div>
+    <div class="tattoo-item">
+      <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/tribal.png" alt="Tribal tattoo">
+      <div class="label">Tribal<br>Tattoo</div>
+    </div>
+    <div class="tattoo-item">
+      <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/trash.png" alt="Trash Polka">
+      <div class="label">Trash<br>Polka</div>
+    </div>
+    <div class="tattoo-item">
+      <img src="/PROJECT CUỐI KÌ/IMAGES/BOOKING/line.png" alt="Line">
+      <div class="label">Line</div>
+    </div>
+  </div>
+</section>
+
+  <script>
+    let selectedArtist = '';
+    let selectedPrice = 0;
+    let selectedStyles = [];
+
+    function selectArtist(name, price) {
+      selectedArtist = name;
+      selectedPrice = price;
+      document.getElementById('selected-artist').innerText = selectedArtist;
+      document.getElementById('selected-price').innerText = selectedPrice.toLocaleString('vi-VN') + 'đ';
+      showTab('style'); // Tự động nhảy sang tab Style
+    }
+
+    function toggleStyle(style) {
+    selectedStyles = [style];
+    document.getElementById('selected-styles').innerText = style;
+    showTab('payment'); // Tự động nhảy sang tab Thanh Toán
+    }
+
+    function showTab(tab) {
+      const steps = ['artist', 'style', 'payment'];
+      steps.forEach(step => {
+        document.getElementById('step-' + step).classList.add('hidden');
+        document.getElementById('tab-' + step).classList.remove('tab-active');
+      });
+      document.getElementById('step-' + tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('tab-active');
+    }
+
+    function submitBooking() {
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+
+      if (!date || !time || !name || !phone || !email) {
+        alert('Vui lòng điền đầy đủ thông tin.');
+        return;
+      }
+
+      alert('Đặt lịch thành công!');
+    }
+  </script>
+  <script src="/PROJECT CUỐI KÌ/JS/BOOKING.js"></script>
+</body>
+</html>

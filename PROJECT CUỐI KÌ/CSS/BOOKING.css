@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+
+body {
+background-color: #000;
+color: #fff;
+font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+.booking-intro {
+background-color: #000;
+color: #fff;
+padding: 80px 20px;
+
+}
+ .tab-buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    transition: all 0.3s;
+  }
+
+  .tab-buttons button.tab-active {
+    background-color: white;
+    color: black;
+  }
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* canh đỉnh */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0px;
+    padding: 40px 20px;
+}
+.intro-left {
+    flex: 1;
+    text-align:center;
+    max-width: 560px;
+  }
+.intro-title {
+font-size: 150px;
+font-weight: bold;
+
+}
+    
+.intro-description {
+    margin-top: -30px; 
+    margin-left: 65px; 
+    font-size: 18px;
+    line-height: 1.6;
+
+}
+    
+.intro-right {
+    flex-shrink: 0;
+    padding-top: 0.2em; /* điều chỉnh hình ảnh khớp hàng với title */
+  }    
+.intro-right img {
+width: 500px;
+max-width: 100%;
+height: auto;
+}
+  /*outro*/  
+.tattoo-suggestions {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .suggestion-title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: flex-end; /* đẩy chữ xuống dưới */
+    gap: 0px; /* Giảm khoảng cách giữa asset và chữ */
+    margin-bottom: 5px;
+  }
+  
+  .suggestion-title h2 {
+    font-size: 45px;
+    font-weight: bold;
+    font-weight: 800;
+    margin: 0; /* Đẩy chữ xuống thấp */
+    padding-bottom: 20px;
+    z-index: 1;
+  }
+  
+  .decor {
+    width: 250px;
+    height: auto;
+    margin-bottom: -20px;
+  }
+  
+  .decor-left {
+    transform: rotate(10deg);
+    margin-right: -150px;
+  }
+  
+  .decor-right {
+    transform: rotate(-10deg);
+    margin-left: -150px;
+  }
+  
+  .tattoo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .tattoo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .tattoo-item img {
+    width: 280px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 8px;
+    line-height: 1.2;
+  }

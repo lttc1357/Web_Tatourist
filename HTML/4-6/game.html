@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiệm Xăm Ưu Đãi</title>
+  <link rel="stylesheet" href="/CSS/4-6/game.css" />
+</head>
+<body>
+
+<div class="video-background">
+  <div id="player"></div>
+</div>
+
+<div class="voucher-box">
+  <h1>🎉 Ưu đãi đặc biệt  🎉</h1>
+  <ul>
+    <li>🔥 Giảm 20% cho hình xăm đầu tiên</li>
+    <li>🎁 Combo đôi: Xăm 2 người giảm 30%</li>
+    <li>⏰ Miễn phí tư vấn & thiết kế hình xăm</li>
+  </ul>
+  <button class="glow-button">Chơi game</button>
+</div>
+<div id="game-container" class="game-hidden">
+    <canvas id="snake-canvas" width="700" height="700"></canvas>
+    <div id="timer">Thời gian: 40</div>
+  </div>
+  
+<!-- POPUP hướng dẫn -->
+<div id="game-rules-popup" class="rules-popup">
+    <div class="rules-content">
+      <h2>🎮 Hướng dẫn & Cơ cấu giải thưởng 🎁</h2>
+      <p>🕹️ Dùng các phím mũi tên để điều khiển rắn.</p>
+      <p>⏱️ Thời gian chơi: 40 giây.</p>
+      <p>🎯 Các phần thưởng:</p>
+      <ul>
+        <li>💛 Giảm 20% cho hình xăm đầu tiên</li>
+        <li>💚 Combo đôi: Xăm 2 người giảm 30%</li>
+        <li>💙 Miễn phí tư vấn thiết kế hình xăm</li>
+        <li>⚫ “Chúc bạn may mắn lần sau” (không cộng điểm)</li>
+      </ul>
+      <button id="start-game-btn" class="glow-button">Bắt đầu</button>
+    </div>
+  </div>
+  
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="/JS/4-6/game.js"></script>
+
+</body>
+</html>

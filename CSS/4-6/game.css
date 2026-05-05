@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+  }
+  
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  #player {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200vw;
+    height: 200vh;
+  }
+  
+  .voucher-box {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    max-width: 600px;
+    margin: 10vh auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  .voucher-box h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  .voucher-box ul {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+  }
+  
+  .voucher-box li {
+    margin-bottom: 10px;
+  }
+  
+  .glow-button {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
+  
+  .glow-button:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
+  }
+  #game-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 720px;
+    height: 770px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  }
+  
+  .game-hidden {
+    display: none;
+  }
+  
+  #snake-canvas {
+    background: #111;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    width: 700px;
+  height: 700px;
+  }
+  
+  #timer {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .game-hidden {
+    display: none !important;
+  }
+  .rules-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    color: white;
+  }
+  
+  .rules-content {
+    background: #111;
+    border: 2px solid #0ff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 20px #0ff;
+    animation: fadeIn 0.5s ease;
+    text-align: left;
+  }
+  #game-rules-popup {
+    display: none; /* ẩn khi chưa bấm */
+  }
+  
+  .rules-content h2 {
+    margin-bottom: 15px;
+    color: #00ffff;
+  }
+  
+  .rules-content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .rules-content {
+    /* ... các dòng sẵn có ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rules-content li {
+    margin: 5px 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

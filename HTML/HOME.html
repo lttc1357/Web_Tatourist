@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TATOURIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/CSS/1-3/HOME.css">
+  <link rel="stylesheet" href="/CSS/header.css">
+  <link rel="stylesheet" href="/CSS/footer.css">
+</head>
+<body>
+  <header class="site-header">  
+    <div class="logo">
+      <a href="/HTML/HOME.html"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/logo.png" alt="Tatourist Logo" /></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/HTML/ARTIST.html">ARTIST</a></li>
+        <li><a href="/HTML/4-6/4.html">STYLE</a></li> 
+        <li><a href="/HTML/4-6/5.html">BLOG</a></li>
+        <li><a href="/HTML/BOOKING.html">BOOKING</a></li>
+        <li><a href="/HTML/6-9/about.html">ABOUT</a></li>
+        <li><a href="/HTML/6-9/REGISTER.html"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/accont.png" alt="Tatourist Logo" /></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="header"></div>
+ <!-- Section: Hero Booking -->
+<section class="hero-booking">
+  <div class="hero-heading">
+    <h2>ĐÂY LÀ TATOURIST</h2>
+    <h1>“OUR LOVE ON YOUR SKIN”</h1>
+  </div>
+
+ <!-- Booking Form -->
+<div class="booking-container">
+  <!-- Left -->
+  <div class="booking-left">
+    <!-- Day Picker -->
+    <div class="date-picker">
+      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      <span>11</span><span>12</span>
+    </div>
+
+    <!-- Month Picker -->
+    <div class="month-picker">
+      <span>1</span><span>2</span><span>3</span><span>4</span>
+      <span>5</span><span>6</span><span>7</span><span>8</span>
+      <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+    </div>
+
+    <!-- Time -->
+    <div class="time">Time: 00:00</div>
+  </div>
+
+    <!-- Right: Form Inputs -->
+    <div class="booking-right">
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="Phone">
+      <input type="email" placeholder="Mail">
+      <label class="checkbox"><input type="checkbox"> Tạo tài khoản để lưu thông tin</label>
+    </div>
+  </div>
+
+  <button class="booking-btn" onclick="window.location.href='/HTML/BOOKING.html'">BOOKING NOW</button>
+
+  <!-- Social Icons -->
+  <div class="social-icons-home">
+    <a href="https://www.facebook.com/lttcccc"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/cc.lttc/"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/instagram.png" alt="Instagram"></a>
+  </div>
+
+  <!-- Art Journey Text -->
+  <div class="art-journey">
+    <h3>HÀNH TRÌNH KHÁM PHÁ NGHỆ THUẬT</h3>
+    <h2>BIẾN Ý TƯỞNG THÀNH HIỆN THỰC</h2>
+  </div>
+
+  <!-- Intro Text -->
+  <div class="intro-text">
+    Chào mừng đến với trải nghiệm đặt lịch xăm tại trang web của chúng tôi <br>
+     nơi kết nối đam mê nghệ thuật thân thể và các nghệ sĩ hình xăm nổi tiếng.
+  </div>
+</section>
+
+  <script>
+    const daySelector = document.getElementById('daySelector');
+    const timeDisplay = document.getElementById('selectedTime');
+
+    let selectedDay = 1;
+
+    function renderDays() {
+      for (let i = 1; i <= 15; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.classList.add(i === selectedDay ? 'active' : '');
+        btn.addEventListener('click', () => {
+          selectedDay = i;
+          timeDisplay.textContent = `0${i}:00`;
+          updateDays();
+        });
+        daySelector.appendChild(btn);
+      }
+    }
+
+    function updateDays() {
+      const buttons = daySelector.querySelectorAll('button');
+      buttons.forEach((btn, index) => {
+        btn.classList.toggle('active', index + 1 === selectedDay);
+      });
+    }
+
+    renderDays();
+  </script>
+
+<!--ARTIST SECTION-->
+<section class="tattoo-section">
+  <div class="container">
+      <div class="tattoo-title">
+          <div class="image-grid">
+              <div class="image-item image-1">
+                  <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tt_artist1_nho.png" alt="Tattoo Artist 1">
+              </div>
+              <div class="image-item image-2">
+                  <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tt_artist2_nho.png" alt="Tattoo Artist 2">
+              </div>
+              <div class="image-item image-3">
+                  <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tt_artist3_nho.png" alt="Tattoo Artist 3">
+              </div>
+              <div class="image-item image-4">
+                  <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tt_artist4_nho.png" alt="Tattoo Artist 4">
+              </div>
+              <div class="image-item image-5">
+                  <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tt_artist5_nho.png" alt="Tattoo Artist 5">
+              </div>
+             
+          </div>
+          <div class="title-text">
+              <div>Tattoo</div>
+              <div>artist</div>
+          </div>
+      </div>
+      
+      <div class="text-content">
+          <p>Chúng tôi cung cấp thông tin chi tiết về các nghệ sĩ, bao gồm portfolio hình <br>
+            xăm, phong cách và đánh giá từ cộng đồng. Bạn có thể dễ dàng tìm kiếm và 
+            <br> so sánh để chọn ra nghệ sĩ phù hợp với ý tưởng của bạn.  <a href="/HTML/ARTIST.html" class="see-more-artist">Xem thêm</a>
+      </div>
+  </div>
+</section>
+
+<script>
+  // Chức năng hiển thị hiệu ứng viền trắng khi hình đè lên chữ
+  document.addEventListener('DOMContentLoaded', function() {
+      const imageItems = document.querySelectorAll('.image-item');
+      const titleText = document.querySelector('.title-text');
+      
+      // Tính toán vị trí giao nhau giữa hình và chữ
+      function checkIntersection() {
+          imageItems.forEach(item => {
+              const itemRect = item.getBoundingClientRect();
+              const titleRect = titleText.getBoundingClientRect();
+              
+              // Kiểm tra nếu hình và chữ giao nhau
+              if (!(itemRect.right < titleRect.left || 
+                    itemRect.left > titleRect.right || 
+                    itemRect.bottom < titleRect.top || 
+                    itemRect.top > titleRect.bottom)) {
+                  
+                  // Nếu giao nhau, thêm class để tạo hiệu ứng chữ viền
+                  titleText.classList.add('text-intersect');
+              }
+          });
+      }
+      
+      // Gọi hàm check khi trang tải và khi resize
+      checkIntersection();
+      window.addEventListener('resize', checkIntersection);
+      
+      // Thêm sự kiện hover cho các hình
+      imageItems.forEach(item => {
+          item.addEventListener('mouseenter', function() {
+              // Tăng z-index khi hover
+              this.style.zIndex = 30;
+          });
+          
+          item.addEventListener('mouseleave', function() {
+              // Đặt lại z-index khi hết hover
+              this.style.zIndex = 10;
+          });
+      });
+  });
+</script>
+<!--Nếu ảnh nghệ sĩ nằm đè lên chữ "Tattoo artist", thì sẽ thêm lớp text-intersect vào để tạo hiệu ứng (ví dụ như viền trắng chữ).
+getBoundingClientRect() lấy vị trí và kích thước của phần tử.
+Kiểm tra nếu ảnh và chữ giao nhau, thì thêm class.
+Cũng có hiệu ứng z-index: khi hover ảnh, nó nổi lên trên.-->
+
+<!-- STYLE SECTION-->
+<div id="style-carousel" style="background: black; padding: 40px 0; color: white;">
+  <div class="container" style="max-width: 100%; margin: 0 auto; display: flex; gap: 2rem; justify-content: center;">
+
+    <!-- Left text area -->
+    <div style="flex: 1; position: relative; z-index: 10;">
+
+      <!-- Chữ "tyle" nằm dưới cùng -->
+      <h2 style="font-size: 210px; font-weight: 900; line-height: 1.1; position: relative; z-index: 1; color: white;margin-left: 230px; margin-top: 60px;">
+        tyle
+      </h2>
+
+      <!-- Asset ở giữa -->
+      <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/asset_style.png" alt="decor"
+           style="position: absolute; top: -40px; left: -60px; width: 560px; z-index: 2; pointer-events: none;" />
+
+      <!-- Chữ "S" nằm trên cùng -->
+      <div style="position: absolute; top: 0; left: 0; z-index: 3;">
+        <span style="
+          font-size: 210px;
+          font-weight: 900;
+          color: black;
+          -webkit-text-stroke: 2px white;
+          position: relative;
+          margin-left: 110px;
+        ">
+          S
+        </span>
+      </div>
+      <!-- Subtitle -->
+      <p style="margin-top: 50px; font-size: 19px; color: #ccc; max-width: 100%px;margin-left: 150px;">
+        Khám phá thế giới đa dạng của nghệ thuật hình<br> 
+        xăm thông qua bộ sưu tập hình xăm phong phú.
+      </p>
+
+      <!-- Button -->
+      <a href="/HTML/4-6/4.html" style="display: inline-block; margin-top: 32px; margin-left: 150px;
+      font-weight: bold; text-decoration: none; color: white; border-bottom: 2px solid white;">
+        Xem thêm
+      </a>
+    </div>
+    
+    <!-- Right image columns -->
+    <div class="style-gallery"></div>
+    <!-- Column Left: 2 visible / 4 total -->
+      <div class="carousel-column column-left-carousel">
+          <div class="carousel-track">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/1.png" alt="1">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/2.png" alt="2">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/1.png" alt="1">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/2.png" alt="2">
+          </div>
+      </div>
+
+    <!-- Column Right: 3 visible / 6 total -->
+      <div class="carousel-column column-right-carousel">
+          <div class="carousel-track">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/3.png" alt="3">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/4.png" alt="4">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/5.png" alt="5">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/3.png" alt="3">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/4.png" alt="4">
+          <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/5.png" alt="5">
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BLOG SECTION-->
+<section class="blog-section">
+  <div class="blog-container">
+    <!-- Cột trái -->
+    <div class="column left-column">
+      <h2><span class="outline-text">B</span>log</h2>
+      <a href="/HTML/4-6/5.html" class="see-more">Xem thêm</a>
+      <div class="blog-card" style="background-image: url('/PROJECT CUỐI KÌ/IMAGES/HOME/blog1.png');">
+        <div class="overlay">
+          <h3>CHIẾC MÁY XĂM ĐẦU TIÊN</h3>
+          <p>Cha đẻ của máy xăm chính là Thomas A. Edison.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột phải -->
+    <div class="column right-column">
+      <div class="blog-card" style="background-image: url('/PROJECT CUỐI KÌ/IMAGES/HOME/blog2.png');">
+        <div class="overlay">
+          <h3>NÊN KIÊNG GÌ SAU KHI XĂM?</h3>
+          <p>Thợ xăm sẽ yêu cầu bạn kiêng một số thứ.</p>
+        </div>
+      </div>
+      <div class="blog-card" style="background-image: url('/PROJECT CUỐI KÌ/IMAGES/HOME/blog3.png');">
+        <div class="overlay">
+          <h3>XĂM HÌNH ĐẸP VÀ AN TOÀN</h3>
+          <p>Xăm hình trở thành xu thế để thể hiện hóa cá nhân.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--slideshow SECTION-->
+ <section class="slideshow-section">
+   <div class="caption-container">
+            <h2 class="artist-caption">
+                <span class="artist-text"><span class="outline-letter">A</span>rtist</span> NÓI GÌ VỀ TATOURIST
+            </h2>
+        </div>
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/artist_comment1.png" alt="Artist 1" class="artist-image">
+            </div>
+            
+            <div class="slide">
+                <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/artist_comment2.png" alt="Artist 2" class="artist-image">
+            </div>
+            
+            <div class="slide">
+                <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/artist_comment3.png" alt="Artist 3" class="artist-image">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <div class="nav-dots">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active-dot");
+            }
+            
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active-dot");
+        }
+        
+        // Auto slideshow
+        let slideTimer = setInterval(() => {
+            plusSlides(1);
+        }, 5000);
+        
+        // Pause slideshow when hovering
+        document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
+            clearInterval(slideTimer);
+        });
+        
+        // Resume slideshow when not hovering
+        document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
+            slideTimer = setInterval(() => {
+                plusSlides(1);
+            }, 5000);
+        });
+    </script>
+ <!--PARTNER SECTION-->
+ <section class="partners-section">
+        <h2 class="section-title">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
+        <img src="/PROJECT CUỐI KÌ/IMAGES/HOME/tai_tro.png" alt="Đối tác của chúng tôi" class="partners-image">
+    </section>
+
+
+<footer class="footer">
+        <!-- Contact Info Column -->
+        <div class="footer-column">
+            <h3 class="footer-title">CONTACT</h3>
+            <p class="footer-info">tatourist20@gmail.com</p>
+            <p class="footer-info">+84 099 798 550</p>
+        </div>
+        
+        <!-- Brand Info Column -->
+        <div class="footer-column center-column">
+            <h3 class="footer-title">TATOURIST</h3>
+            <p class="footer-info">Since</p>
+            <p class="footer-info">2020-2024</p>
+        </div>
+        
+        <!-- Social Icons Column -->
+         <div class="footer-column" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cc.lttc/" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/lttcccc" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a> 
+                <a href="https://www.facebook.com/nguyen.tuan.995160" class="social-icon">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+            <!-- Logo -->
+            <img src="/IMAGES/HOME/logo_metal.png" alt="Tatourist Logo" class="footer-logo">
+        </div>
+    </footer>
+
+  <!-- FontAwesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="/PROJECT CUỐI KÌ/JS/1-3/HOME.js"></script>
+</body>
+</html>
+
+

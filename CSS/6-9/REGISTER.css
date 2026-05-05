@@ -1,0 +1,277 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  .container {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .background-top {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+  
+  .form-left {
+    flex: 1 1 300px; /* Giữ nguyên hoặc tăng giá trị thứ ba nếu cần */
+    max-width: 400px; /* Tăng giá trị này */
+    text-align: center;
+    margin-right: 250px;
+  }
+  
+  .form-left h1 {
+    font-size: 120px;
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+  }
+  
+  .form-left .social-icons {
+  display: flex;
+    flex-direction: row; /* đảm bảo icon nằm ngang */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* khoảng cách giữa các icon */
+    margin-top: 20px;
+    margin-right: 0; /* bỏ margin sai gây lệch icon */
+    margin-left: 150px;
+}
+  
+  .icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white !important; 
+    transition: transform 0.2s ease;
+}
+  
+  .icon:hover {
+    transform: scale(1.2);
+    color: #ddd;
+  }
+  
+  
+  .form-right {
+    flex: 1 1 500px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(0, 0, 0); /* Thêm màu trắng */
+  }
+  
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #fffa;
+    box-shadow: 0 0 15px white;
+    transform: translateY(-2px);
+  }
+  
+  
+  .quote-section {
+    margin-top: 70px;
+    position: relative; 
+    z-index: 2; /
+  }
+  
+  .quote-section p {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative; 
+    z-index: 3; 
+  }
+  
+  .tribal {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative; 
+    z-index: 1; 
+  }
+  
+  .tribal img {
+    width: 1000px;
+    height: auto;
+  }
+/* Style cho phone input */
+input[type="tel"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+/* Gender Selection - Phiên bản đẹp hơn */
+.gender-group {
+    margin: 12px 0 15px;
+  }
+  
+  .gender-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .gender-options {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .gender-option {
+    flex: 1;
+    position: relative;
+  }
+  
+  .gender-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .gender-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .gender-option input:checked + .gender-card {
+    border-color: white;
+    background-color: #333;
+    box-shadow: 0 0 0 1px white;
+  }
+  
+  .gender-icon {
+    margin-right: 6px;
+    font-size: 14px;
+  }
+  
+  .gender-text {
+    font-size: 13px;
+    
+  }
+  
+  /* Style mới cho terms checkbox */
+  .terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .terms-checkbox input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .checkmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 3px;
+    margin-right: 8px;
+    position: relative;
+  }
+  
+  .terms-checkbox input:checked ~ .checkmark {
+    background-color: white;
+    border-color: white;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .terms-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* Ẩn các trường register-only khi ở chế độ đăng nhập */
+.register-only {
+    display: block; /* Mặc định hiển thị */
+  }
+  
+  .login-mode .register-only {
+    display: none; /* Ẩn khi ở chế độ login */
+  }
+  

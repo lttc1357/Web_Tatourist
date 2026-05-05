@@ -1,0 +1,42 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; 
+  padding: 10px 120px; 
+  color: white;
+  z-index: 1000; /* để nằm trên cùng */
+}
+  
+  .main-nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .account-icon img {
+    width: 18;
+    height: 18;
+    top: 33px;
+    left: 1195px;
+    filter: brightness(0) invert(1);
+  }
+  .site-header,
+.site-header a {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}

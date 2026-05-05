@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" href="/CSS/6-9/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="stylesheet" href="/PROJECT CUỐI KÌ/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+</head>
+<body>
+    <header class="site-header">  
+    <div class="logo">
+      <a href="/HTML/HOME.html"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/logo.png" alt="Tatourist Logo" /></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/HTML/ARTIST.html">ARTIST</a></li>
+        <li><a href="/HTML/4-6/4.html">STYLE</a></li> 
+        <li><a href="/HTML/4-6/5.html">BLOG</a></li>
+        <li><a href="/HTML/BOOKING.html">BOOKING</a></li>
+        <li><a href="/HTML/6-9/about.html">ABOUT</a></li>
+        <li><a href="/HTML/6-9/REGISTER.html"><img src="/PROJECT CUỐI KÌ/IMAGES/HOME/accont.png" alt="Tatourist Logo" /></a></li>
+      </ul>
+    </nav>
+  </header>
+
+     <div class="profile-container">
+        <!-- Phần tiêu đề -->
+        <div class="profile-header">
+            <h1>XIN CHÀO</h1>
+            <h2 id="user-name"></h2>
+        </div>
+
+        <!-- Phần menu -->
+        <div class="profile-menu">
+            <button class="menu-button active">Thông tin cá nhân</button>
+            <button class="menu-button">Booking</button>
+        </div>
+
+        <!-- Phần thông tin -->
+        <div class="profile-info-section">
+            <div class="info-header">
+                <h3>THÔNG TIN CHUNG</h3>
+                <button class="edit-button" onclick="logout()">Đăng xuất</button>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-row">
+                    <span class="info-label">Tên</span>
+                    <span class="info-value" id="profile-name"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Mail</span>
+                    <span class="info-value" id="profile-email"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Số điện thoại</span>
+                    <span class="info-value" id="profile-phone"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Giới tính</span>
+                    <span class="info-value" id="profile-gender"></span>
+                </div>
+            </div>
+        </div> 
+
+<!-- Tab Booking -->
+<div class="profile-booking-section">
+    <div class="info-header">
+        <h3>THÔNG TIN ĐẶT LỊCH</h3>
+    </div>
+    <div class="info-grid" id="booking-info">
+        <div class="info-row">
+            <span class="info-label">Nghệ sĩ</span>
+            <span class="info-value" id="booking-artist"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Ngày</span>
+            <span class="info-value" id="booking-date"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Giờ</span>
+            <span class="info-value" id="booking-time"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Phong cách</span>
+            <span class="info-value" id="booking-style"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Phương thức thanh toán</span>
+            <span class="info-value" id="booking-method"></span>
+        </div>
+    </div>
+
+    <!-- Chỉ 1 khối này thôi -->
+     <div id="no-booking-message" style="display: none; text-align: center; margin-top: 20px;">
+        <p>Không có thông tin đặt lịch.</p>
+        <button onclick="window.location.href='/HTML/BOOKING.html'" class="edit-button">Đặt lịch ngay</button>
+    </div>
+</div>
+
+</div>
+
+<!-- Nút quay lại (di chuyển ra ngoài tabs) -->
+<button onclick="window.location.href='/HTML/HOME.html'" class="back-button">
+    <i class="fas fa-arrow-left"></i> Quay lại
+</button>
+
+    </div>
+
+<footer class="footer">
+        <!-- Contact Info Column -->
+        <div class="footer-column">
+            <h3 class="footer-title">CONTACT</h3>
+            <p class="footer-info">tatourist20@gmail.com</p>
+            <p class="footer-info">+84 099 798 550</p>
+        </div>
+        
+        <!-- Brand Info Column -->
+        <div class="footer-column center-column">
+            <h3 class="footer-title">TATOURIST</h3>
+            <p class="footer-info">Since</p>
+            <p class="footer-info">2020-2024</p>
+        </div>
+        
+        <!-- Social Icons Column -->
+         <div class="footer-column" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cc.lttc/" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/lttcccc" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a> 
+                <a href="https://www.facebook.com/nguyen.tuan.995160" class="social-icon">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+            
+            <!-- Logo -->
+            <img src="/IMAGES/HOME/logo_metal.png" alt="Tatourist Logo" class="footer-logo">
+        </div>
+  </footer>
+
+
+    <script src="/JS/6-9/profile.js"></script>
+</body>
+</html>
